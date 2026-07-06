@@ -61,13 +61,13 @@ export function ProductCard({ product, index }: { product: ShopifyProduct; index
             </div>
           </div>
 
-          <Button
-            onClick={() => setOpen(true)}
-            className="cta-gradient mt-5 w-full text-black hover:opacity-90 uppercase tracking-widest text-xs font-semibold"
-          >
-            <Sparkles className="h-4 w-4 mr-1.5" /> Reserve My Share
-          </Button>
-        </div>
+          <GradientBorderButton
+  onClick={() => setOpen(true)}
+  className="mt-5 w-full uppercase tracking-widest text-xs font-semibold"
+>
+  <Sparkles className="h-4 w-4 mr-1.5" /> Reserve My Share
+</GradientBorderButton>
+
       </motion.div>
 
       <ProductModal open={open} onOpenChange={setOpen} product={product} />
