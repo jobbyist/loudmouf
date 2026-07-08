@@ -1,21 +1,24 @@
 {
-  "name": "Loudmouf (Bun)",
+  "name": "Loudmouf (npm + Node)",
   "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
   "features": {
     "ghcr.io/devcontainers/features/node:1": {
-      "version": "20"
+      "version": "20",
+      "npmVersion": "latest",
+      "nodeGypDependencies": true
     }
   },
-  "postCreateCommand": "curl -fsSL https://bun.sh/install | bash && bun install",
+  "postCreateCommand": "npm ci --include=dev",   // Clean install using package-lock.json
+  "postStartCommand": "echo '✅ Node:' $(node --version) ' | npm:' $(npm --version)",
   "remoteUser": "root",
   "forwardPorts": [3000, 5173],
   "customizations": {
     "vscode": {
       "extensions": [
-        "oven.bun-vscode",
         "dbaeumer.vscode-eslint",
         "esbenp.prettier-vscode",
         "bradlc.vscode-tailwindcss"
+        // Optionally keep "oven.bun-vscode" if you want Bun as fallback
       ]
     }
   }
