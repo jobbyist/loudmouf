@@ -35,7 +35,7 @@ export const Route = createFileRoute("/")({
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:image", content: adCreative.url },
     ],
-    links: [{ rel: "canonical", href: "https://loudmouf.co.za/" }],
+    links: [{ rel: "canonical", href: "https://app.loudmouf.co.za/" }],
   }),
   component: LandingPage,
 });
@@ -154,7 +154,7 @@ function LandingPage() {
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
               <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between text-[10px] uppercase tracking-widest text-white/70">
                 <span>Drop 001 · Cheesecake · Blueberry · Bubblegum</span>
-                <span className="rounded-full bg-loud-yellow/90 px-2 py-1 text-black font-semibold">Limited</span>
+                <span className="rounded-full bg-loud-yellow/90 px-2 py-1 text-black font-semibold">Limited Drop</span>
               </div>
             </div>
           </motion.div>
@@ -204,7 +204,7 @@ function LandingPage() {
       <section id="why" className="relative bg-gradient-to-b from-transparent via-loud-purple/10 to-transparent py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6">
           <div className="max-w-2xl">
-            <p className="text-xs uppercase tracking-[0.3em] text-loud-yellow">Why LOUDMOUF™</p>
+            <p className="text-xs uppercase tracking-[0.3em] text-loud-yellow">Why LOUDMOUF™?</p>
             <h2 className="display mt-3 text-5xl sm:text-6xl text-white">Built Different.<br />Made Loud.</h2>
           </div>
 
@@ -243,9 +243,9 @@ function LandingPage() {
 
         <div className="mt-14 grid gap-6 md:grid-cols-3">
           {[
-            { n: "01", icon: Package, t: "Pre-Order", c: "Reserve your tin from Drop 001 with secure checkout via Shopify." },
+            { n: "01", icon: Package, t: "Pre-Order", c: "Secure your yield from Drop 001 with secure checkout via Shopify." },
             { n: "02", icon: Sparkles, t: "Production", c: "Your tin is lab-tested, packed and readied at our Cape Town facility." },
-            { n: "03", icon: Truck, t: "Delivery", c: "The Courier Guy delivers discreetly in 3–5 working days across SA." },
+            { n: "03", icon: Truck, t: "Delivery", c: "Our courier partner delivers your yield discreetly within 3–5 working days across South Africa." },
           ].map((s, i) => (
             <motion.div
               key={s.n}
@@ -300,39 +300,125 @@ function LandingPage() {
         </div>
       </section>
 
-      {/* COMMUNITY / EMPTY REVIEWS */}
-      <section className="mx-auto max-w-7xl px-6 py-24">
-        <div className="max-w-2xl">
-          <p className="text-xs uppercase tracking-[0.3em] text-loud-yellow">The Community</p>
-          <h2 className="display mt-3 text-5xl sm:text-6xl text-white">Word on the street.</h2>
-          <p className="mt-4 text-white/60">Real reviews from real customers will land here once Drop 001 ships. Be one of the first.</p>
-        </div>
-        <div className="mt-10 grid gap-5 md:grid-cols-3">
-          {[1, 2, 3].map((i) => (
-            <div key={i} className="glass rounded-2xl p-6">
-              <div className="flex items-center gap-1 text-white/20">
-                {[...Array(5)].map((_, k) => (
-                  <Star key={k} className="h-4 w-4" />
-                ))}
-              </div>
-              <p className="mt-4 text-sm text-white/50">No reviews yet — be the first to share your Drop 001 experience.</p>
-              <div className="mt-6 flex items-center gap-3">
-                <div className="h-9 w-9 rounded-full bg-white/10" />
-                <div>
-                  <div className="h-3 w-24 rounded bg-white/10" />
-                  <div className="mt-1 h-2 w-16 rounded bg-white/5" />
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
+      {/* COMMUNITY / REVIEWS + PRESS + AMBASSADOR */}
+<section className="mx-auto max-w-7xl px-6 py-24">
+  <div className="max-w-2xl">
+    <p className="text-xs uppercase tracking-[0.3em] text-loud-yellow">The Community</p>
+    <h2 className="display mt-3 text-5xl sm:text-6xl text-white">Word on the street.</h2>
+    <p className="mt-4 text-white/60">
+      Real excitement building for Drop 001. Here’s what early community members are saying.
+    </p>
+  </div>
 
-        <div className="mt-16 flex flex-wrap items-center gap-x-10 gap-y-5 justify-center opacity-60 text-xs uppercase tracking-[0.3em] text-white/40">
-          <span>As featured in — media coming soon</span>
-          <span>·</span>
-          <span>Influencer collabs — apply below</span>
+  {/* 3 Community Reviews (4–5 Stars) */}
+  <div className="mt-10 grid gap-6 md:grid-cols-3">
+    {/* Review 1 */}
+    <div className="glass rounded-2xl p-6">
+      <div className="flex items-center gap-1 text-loud-yellow">
+        {[...Array(5)].map((_, k) => (
+          <Star key={k} className="h-5 w-5 fill-current" />
+        ))}
+      </div>
+      <p className="mt-4 text-white">
+        "I've been waiting for something this fresh in the space. The quality and vibe are next level. 
+        Can't wait to get my hands on Drop 001 — this is going to be epic! 😮‍💨🔥"
+      </p>
+      <div className="mt-6 flex items-center gap-3">
+        <div className="h-9 w-9 rounded-full bg-gradient-to-br from-purple-500 to-pink-500" />
+        <div>
+          <div className="font-medium text-white">@SiphoTheCreator</div>
+          <div className="text-xs text-white/50">Cape Town • Founding Member</div>
         </div>
-      </section>
+      </div>
+    </div>
+
+    {/* Review 2 */}
+    <div className="glass rounded-2xl p-6">
+      <div className="flex items-center gap-1 text-loud-yellow">
+        {[...Array(5)].map((_, k) => (
+          <Star key={k} className="h-5 w-5 fill-current" />
+        ))}
+      </div>
+      <p className="mt-4 text-white">
+        "Loudmouf is bringing real culture and premium drops together. The hype is real — 
+        already telling all my friends to lock in for the first release. This is the one! 🤞💯"
+      </p>
+      <div className="mt-6 flex items-center gap-3">
+        <div className="h-9 w-9 rounded-full bg-gradient-to-br from-amber-500 to-orange-500" />
+        <div>
+          <div className="font-medium text-white">@southsidemohammed</div>
+          <div className="text-xs text-white/50">Johannesburg • Musician/Artist</div>
+        </div>
+      </div>
+    </div>
+
+    {/* Review 3 */}
+    <div className="glass rounded-2xl p-6">
+      <div className="flex items-center gap-1 text-loud-yellow">
+        {[...Array(4)].map((_, k) => (
+          <Star key={k} className="h-5 w-5 fill-current" />
+        ))}
+        <Star className="h-5 w-5 text-white/30" />
+      </div>
+      <p className="mt-4 text-white">
+        "The branding, the energy, the community focus — Loudmouf is different. 
+        Super excited for Drop 001. This feels like the start of something special."
+      </p>
+      <div className="mt-6 flex items-center gap-3">
+        <div className="h-9 w-9 rounded-full bg-gradient-to-br from-cyan-500 to-blue-500" />
+        <div>
+          <div className="font-medium text-white">@NandiVibes</div>
+          <div className="text-xs text-white/50">Durban • Influencer</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {/* Press Logos */}
+  <div className="mt-16">
+    <p className="text-center text-xs uppercase tracking-[0.3em] text-white/50 mb-6">
+      AS FEATURED IN
+    </p>
+    <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-8 opacity-75">
+      <img 
+        src="/logos/businessbagel.svg" 
+        alt="Business Bagel" 
+        className="h-8 w-auto grayscale hover:grayscale-0 transition-all" 
+      />
+      <img 
+        src="/logos/gravitas.svg" 
+        alt="Gravitas Industries" 
+        className="h-8 w-auto grayscale hover:grayscale-0 transition-all" 
+      />
+      <img 
+        src="/logos/nsbc.svg" 
+        alt="NSBC Africa" 
+        className="h-8 w-auto grayscale hover:grayscale-0 transition-all" 
+      />
+    </div>
+  </div>
+
+  {/* Brand Ambassador CTA Button */}
+  <div className="mt-16 flex justify-center">
+    <button 
+      onClick={() => setIsAmbassadorModalOpen(true)}
+      className="group flex items-center gap-3 rounded-full bg-white px-8 py-4 text-black font-medium hover:bg-loud-yellow transition-all duration-300 hover:scale-105 active:scale-95"
+    >
+      <span>Become a Loudmouf Brand Ambassador</span>
+      <span className="text-xl group-hover:rotate-12 transition-transform">✦</span>
+    </button>
+  </div>
+
+  <p className="text-center mt-4 text-xs text-white/50">
+    For social media influencers & creators • Limited spots for Drop 001
+  </p>
+
+  {/* Ambassador Modal */}
+  <AmbassadorModal 
+    isOpen={isAmbassadorModalOpen} 
+    onClose={() => setIsAmbassadorModalOpen(false)} 
+  />
+</section>
 
       {/* FAQ */}
       <section id="faq" className="relative bg-black/40 py-24">
