@@ -19,6 +19,12 @@ import storyImg from "@/assets/story.png.asset.json";
 import productsHero from "@/assets/products-hero.png.asset.json";
 import adCreative from "@/assets/ad-creative.png.asset.json";
 
+import { useState } from 'react';
+import AmbassadorModal from '@/components/site/AmbassadorModal'; // Adjust path if needed
+
+// Inside your component:
+const [isAmbassadorModalOpen, setIsAmbassadorModalOpen] = useState(false);
+
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
