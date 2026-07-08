@@ -15,6 +15,12 @@ import { reportLovableError } from "../lib/lovable-error-reporting";
 import { Toaster } from "@/components/ui/sonner";
 import { useCartSync } from "@/hooks/useCartSync";
 
+import { useState } from 'react';
+import AmbassadorModal from '@/components/site/AmbassadorModal'; // Adjust path if needed
+
+// Inside your ambassador modal component:
+const [isAmbassadorModalOpen, setIsAmbassadorModalOpen] = useState(false);
+
 function NotFoundComponent() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
