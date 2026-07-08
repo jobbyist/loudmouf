@@ -28,7 +28,6 @@ export function ProductCard({ product, index }: { product: ShopifyProduct; index
       {/* Background gradient overlay */}
       <div className={cn("pointer-events-none absolute inset-0 bg-gradient-to-br opacity-60", profile.gradientClass)} />
 
-      {/* Main content wrapper */}
       <div className="relative z-10">
         <button
           onClick={() => setOpen(true)}
@@ -64,9 +63,11 @@ export function ProductCard({ product, index }: { product: ShopifyProduct; index
           </div>
         </div>
 
+        {/* Updated: Using standard Button component */}
         <Button
           onClick={() => setOpen(true)}
           className="mt-5 w-full uppercase tracking-widest text-xs font-semibold"
+          variant="default"   // or "outline" / "secondary" depending on desired style
         >
           <Sparkles className="h-4 w-4 mr-1.5" /> Reserve My Share
         </Button>
