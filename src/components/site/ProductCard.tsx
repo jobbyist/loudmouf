@@ -25,9 +25,11 @@ export function ProductCard({ product, index }: { product: ShopifyProduct; index
         "hover:border-white/20 hover:-translate-y-1 transition-all duration-500",
       )}
     >
+      {/* Background gradient overlay */}
       <div className={cn("pointer-events-none absolute inset-0 bg-gradient-to-br opacity-60", profile.gradientClass)} />
 
-      <div className="relative">
+      {/* Main content wrapper */}
+      <div className="relative z-10">
         <button
           onClick={() => setOpen(true)}
           className={cn(
