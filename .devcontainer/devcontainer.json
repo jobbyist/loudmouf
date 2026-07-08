@@ -3,12 +3,12 @@
   "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
   "features": {
     "ghcr.io/devcontainers/features/node:1": {
-      "version": "20",
+      "version": "24",
       "npmVersion": "latest",
       "nodeGypDependencies": true
     }
   },
-  "postCreateCommand": "npm ci --include=dev",   // Clean install using package-lock.json
+  "postCreateCommand": "npm ci --include=dev",
   "postStartCommand": "echo '✅ Node:' $(node --version) ' | npm:' $(npm --version)",
   "remoteUser": "root",
   "forwardPorts": [3000, 5173],
@@ -18,7 +18,6 @@
         "dbaeumer.vscode-eslint",
         "esbenp.prettier-vscode",
         "bradlc.vscode-tailwindcss"
-        // Optionally keep "oven.bun-vscode" if you want Bun as fallback
       ]
     }
   }
