@@ -1,6 +1,5 @@
 {
   "version": 2,
-  "domains": ["loudmouf.co.za", "www.loudmouf.co.za"],
   "framework": "vite",
   "buildCommand": "npm run build",
   "outputDirectory": ".output/public",
