@@ -296,8 +296,8 @@ function LandingPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className="relative aspect-[4/5] overflow-hidden rounded-3xl border border-white/10"
+          >
             <img src={getAssetUrl(storyImg)} alt="LOUDMOUF brand story" className="h-full w-full object-cover" />
-            <img src={storyImg.url} alt="LOUDMOUF brand story" className="h-full w-full object-cover" />
           </motion.div>
           <div>
             <p className="text-xs uppercase tracking-[0.3em] text-loud-yellow">The Movement</p>
@@ -536,9 +536,8 @@ function LandingPage() {
           </div>
 
             <img src={getAssetUrl(productsHero)} alt="LOUDMOUF product lineup" className="mx-auto w-full rounded-3xl border border-white/10" loading="lazy" />
+          <div className="mt-12">
             <img src={productsHero.url} alt="LOUDMOUF product lineup" className="mx-auto w-full rounded-3xl border border-white/10" loading="lazy" />
-          </div>
-        </div>
       </section>
 
       <Footer />
