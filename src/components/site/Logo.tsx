@@ -1,9 +1,7 @@
 import { cn } from "@/lib/utils";
 
 // Import logo from public folder for production, handle both dev and prod
-const logoSrc = typeof window !== 'undefined' 
-  ? "/loudmouf-logo.png"
-  : "/loudmouf-logo.png";
+const logoSrc = "/loudmouf-logo.png";
 
 /**
  * LOUDMOUF™ wordmark — official brand lockup.
