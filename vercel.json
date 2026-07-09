@@ -4,11 +4,6 @@
   "buildCommand": "npm run build",
   "outputDirectory": ".output/public",
   "installCommand": "npm ci",
-  "env": {
-    "NODE_ENV": "production",
-"SHOPIFY_STOREFRONT_TOKEN": "@shopify-storefront-token",
-"SHOPIFY_STORE_DOMAIN": "@shopify-store-domain"
-  },
   "headers": [
     {
       "source": "/(.*)",
