@@ -382,17 +382,17 @@ function LandingPage() {
 
   {/* Press Logos */}
   <div className="mt-16">
-        src="/images/logos/businessbagel.svg" 
+    <p className="text-center text-xs uppercase tracking-[0.3em] text-white/50 mb-6">
       AS FEATURED IN
     </p>
     <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-8 opacity-75">
       <img 
-        src="/images/logos/gravitas.svg" 
+        src="/logos/businessbagel.svg" 
         alt="Business Bagel" 
         className="h-8 w-auto grayscale hover:grayscale-0 transition-all" 
       />
       <img 
-        src="/images/logos/nsbc.svg" 
+        src="/logos/gravitas.svg" 
         alt="Gravitas Industries" 
         className="h-8 w-auto grayscale hover:grayscale-0 transition-all" 
       />

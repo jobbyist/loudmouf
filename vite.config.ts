@@ -1,46 +1,37 @@
+// @lovable.dev/vite-tanstack-config already handles most plugins
+// Do NOT add duplicate core plugins (tanstackStart, viteReact, tailwindcss, etc.)
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 export default defineConfig({
   tanstackStart: {
-    server: {
-      entry: "server",
-      preset: "vercel"
-    },
-    client: {
-      entry: "start"
-    }
+    server: { entry: "server" },
   },
 
-  base: "/",
-
-  publicDir: "public",
-
-  assetsInclude: ["**/*.png", "**/*.jpg", "**/*.jpeg", "**/*.gif", "**/*.svg", "**/*.webp", "**/*.mp4"],
+  // Base path: '/' for custom domain (app.loudmouf.co.za)
+  base: '/',
 
   build: {
     outDir: 'dist',
-    sourcemap: true,
-    minify: 'esbuild',
+    sourcemap: true,           // Enable source maps for debugging
+    minify: 'esbuild',         // Fast and effective minification
 
     rollupOptions: {
       output: {
+        // Separate vendor chunk for better caching
         manualChunks: {
           vendor: ['react', 'react-dom'],
         },
+        // Better asset naming for caching
         assetFileNames: (assetInfo) => {
-          const name = assetInfo.name || "";
-          if (name.endsWith('.css')) {
-            return "assets/css/[name]-[hash][extname]";
+          if (assetInfo.name?.endsWith('.css')) {
+            return 'assets/css/[name]-[hash][extname]';
           }
-          if (/\.(png|jpe?g|gif|svg|webp|ico)$/.test(name)) {
-            return "assets/images/[name]-[hash][extname]";
-          }
-          return "assets/[name]-[hash][extname]";
+          return 'assets/[name]-[hash][extname]';
         },
       },
     },
 
-    target: "es2022",
+    target: 'es2022',
     chunkSizeWarningLimit: 1000,
   },
 

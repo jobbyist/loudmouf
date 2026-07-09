@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import logoAsset from "/loudmouf-logo.png";
 
 /**
  * LOUDMOUF™ wordmark — official brand lockup.
@@ -21,7 +22,7 @@ export function Logo({
 
   return (
     <img
-      src="/loudmouf-logo.png"
+      src={logoAsset.url}
       alt="LOUDMOUF"
       className={cn("w-auto select-none", dims, className)}
       draggable={false}
