@@ -1,6 +1,10 @@
 {
-  "name": "Loudmouf (Optimized)",
+  "name": "Loudmouf (Final Optimized)",
   "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+
+  "overrideFeatureInstallOrder": [
+    "ghcr.io/devcontainers/features/node"
+  ],
 
   "features": {
     "ghcr.io/devcontainers/features/node:1": {
@@ -8,12 +12,12 @@
       "npmVersion": "latest",
       "nodeGypDependencies": true
     },
-    "ghcr.io/devcontainers/features/git:1": {},
     "ghcr.io/devcontainers/features/common-utils:2": {
       "installZsh": true,
       "installOhMyZsh": true,
       "upgradePackages": true
-    }
+    },
+    "ghcr.io/devcontainers/features/git:1": {}
   },
 
   "remoteUser": "root",
@@ -38,7 +42,12 @@
       ],
       "settings": {
         "editor.formatOnSave": true,
-        "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+        "eslint.validate": [
+          "javascript",
+          "javascriptreact",
+          "typescript",
+          "typescriptreact"
+        ],
         "files.autoSave": "onFocusChange"
       }
     }
@@ -46,11 +55,5 @@
 
   "mounts": [
     "source=${localEnv:HOME}/.zsh_history,target=/root/.zsh_history,type=bind"
-  ],
-  
-  "overrideFeatureInstallOrder": [
-  "ghcr.io/devcontainers/features/node"
-]
-
-  
+  ]
 }
