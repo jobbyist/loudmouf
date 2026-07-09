@@ -77,7 +77,7 @@ export const PROFILES: Record<string, ProfileMeta> = {
     ],
     effects: ["Balanced euphoria", "Social spark", "Playful mood", "Anytime ease"],
     composition: ["Premium true-grade terpenes", "Smoke-free pouch", "Tobacco-free", "Discreet & odourless"],
-    composition: ["THC-infused from delegated cultivation share", "Smoke-free pouch", "Tobacco-free", "Discreet & odourless"],
+    accentClass: "text-loud-pink",
     ringClass: "ring-loud-pink/40",
     gradientClass: "from-loud-pink/25 via-loud-pink/5 to-transparent",
   },
