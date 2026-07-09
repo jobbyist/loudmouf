@@ -46,5 +46,11 @@
 
   "mounts": [
     "source=${localEnv:HOME}/.zsh_history,target=/root/.zsh_history,type=bind"
-  ]
+  ],
+  
+  "overrideFeatureInstallOrder": [
+  "ghcr.io/devcontainers/features/node"
+]
+
+  
 }
