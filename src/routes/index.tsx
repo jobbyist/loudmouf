@@ -536,8 +536,7 @@ function LandingPage() {
           </div>
 
             <img src={getAssetUrl(productsHero)} alt="LOUDMOUF product lineup" className="mx-auto w-full rounded-3xl border border-white/10" loading="lazy" />
-            <img src={getAssetUrl(productsHero)} alt="LOUDMOUF product lineup" className="mx-auto w-full rounded-3xl border border-white/10" loading="lazy" />
-          </div>
+        </div>
       </section>
 
       <Footer />
