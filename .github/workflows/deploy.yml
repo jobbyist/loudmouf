@@ -30,6 +30,9 @@ jobs:
       - name: Build project
         run: npm run build
 
+      - name: Copy CNAME to build output
+        run: cp CNAME .output/public/
+
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
