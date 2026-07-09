@@ -1,5 +1,9 @@
 import { cn } from "@/lib/utils";
-import logoAsset from "/loudmouf-logo.png";
+
+// Import logo from public folder for production, handle both dev and prod
+const logoSrc = typeof window !== 'undefined' 
+  ? "/loudmouf-logo.png"
+  : "/loudmouf-logo.png";
 
 /**
  * LOUDMOUF™ wordmark — official brand lockup.
@@ -22,7 +26,7 @@ export function Logo({
 
   return (
     <img
-      src={logoAsset.url}
+      src={logoSrc}
       alt="LOUDMOUF"
       className={cn("w-auto select-none", dims, className)}
       draggable={false}
