@@ -69,7 +69,7 @@ export function EarlyAccessBar() {
           <div className="min-w-0">
             <div className="flex items-center gap-2 text-[10px] sm:text-[11px] uppercase tracking-[0.22em]">
               <Sparkles className="h-3.5 w-3.5 text-loud-yellow" />
-              <span className="text-gradient-loud font-semibold">Early Access · 25% Off</span>
+              <span className="text-gradient-loud font-semibold">Founding Member Rate · 25% Off</span>
               <span className="text-white/50">· {seatsLeft.toLocaleString()} of {CAP.toLocaleString()} spots left</span>
             </div>
             <div className="mt-2">
@@ -90,7 +90,7 @@ export function EarlyAccessBar() {
               href="#preorder"
               className="cta-gradient inline-flex items-center gap-2 rounded-full px-4 sm:px-5 py-2.5 text-[11px] sm:text-xs font-semibold uppercase tracking-widest text-black shadow-lg"
             >
-              Get Early Access
+              Request Allocation
             </a>
           </div>
         </div>

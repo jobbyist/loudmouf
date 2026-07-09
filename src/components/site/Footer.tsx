@@ -34,7 +34,7 @@ export function Footer() {
         <div className="lg:col-span-1">
           <Logo size="lg" />
           <p className="mt-4 max-w-xs text-sm text-white/60">
-            A private members collective for those who want the experience without the smoke. Discreet. Potent. Community-first.
+            Private Members-Only Lifestyle Club. Delegate your personal cultivation rights to our horticulturists. Discreet. Potent. Members-first.
           </p>
           <div className="mt-6 flex items-center gap-3">
             <a href="https://instagram.com" aria-label="Instagram" className="glass grid h-10 w-10 place-items-center rounded-full hover:text-loud-yellow">
@@ -53,19 +53,20 @@ export function Footer() {
           <h4 className="text-xs uppercase tracking-widest text-gradient-loud font-semibold">The Collective</h4>
           <ul className="mt-4 space-y-2 text-sm text-white/70">
             <li><a href="/#product" className="hover:text-white">Yield Profiles</a></li>
-            <li><a href="/#preorder" className="hover:text-white">Reserve My Share</a></li>
+            <li><a href="/#preorder" className="hover:text-white">Request Allocation</a></li>
             <li><Link to="/launch" className="hover:text-white">Launch Event</Link></li>
-            <li><Link to="/track-my-order" className="hover:text-white">Track My Allocation</Link></li>
+            <li><Link to="/track-my-order" className="hover:text-white">Personal Allocation Tracker</Link></li>
           </ul>
         </div>
 
         <div>
-          <h4 className="text-xs uppercase tracking-widest text-gradient-loud font-semibold">Membership</h4>
+          <h4 className="text-xs uppercase tracking-widest text-gradient-loud font-semibold">Member Resources</h4>
           <ul className="mt-4 space-y-2 text-sm text-white/70">
             <li><Link to="/shipping-policy" className="hover:text-white">Delivery Policy</Link></li>
             <li><Link to="/refund-policy" className="hover:text-white">Returns & Exchanges</Link></li>
-            <li><Link to="/terms" className="hover:text-white">Membership Agreement</Link></li>
-            <li><Link to="/privacy-policy" className="hover:text-white">Privacy Policy</Link></li>
+            <li><Link to="/terms" className="hover:text-white font-semibold">Membership Agreement</Link></li>
+            <li><Link to="/privacy-policy" className="hover:text-white font-semibold">Privacy Policy</Link></li>
+            <li><a href="/#faq" className="hover:text-white font-semibold">Disclaimers</a></li>
             <li><Link to="/contact" className="hover:text-white">Contact</Link></li>
           </ul>
         </div>

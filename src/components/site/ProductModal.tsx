@@ -43,7 +43,7 @@ export const PROFILES: Record<string, ProfileMeta> = {
     ],
     effects: ["Uplifted mood", "Creative flow", "Sociable energy", "Daytime clarity"],
     composition: ["Premium true-grade terpenes", "Smoke-free pouch", "Tobacco-free", "Discreet & odourless"],
-    accentClass: "text-loud-yellow",
+    composition: ["THC-infused from delegated cultivation share", "Smoke-free pouch", "Tobacco-free", "Discreet & odourless"],
     ringClass: "ring-loud-yellow/40",
     gradientClass: "from-loud-yellow/25 via-loud-yellow/5 to-transparent",
   },
@@ -60,7 +60,7 @@ export const PROFILES: Record<string, ProfileMeta> = {
     ],
     effects: ["Deep relaxation", "Evening wind-down", "Restful sleep support", "Body ease"],
     composition: ["Premium true-grade terpenes", "Smoke-free pouch", "Tobacco-free", "Discreet & odourless"],
-    accentClass: "text-[color:var(--loud-blue-bright)]",
+    composition: ["THC-infused from delegated cultivation share", "Smoke-free pouch", "Tobacco-free", "Discreet & odourless"],
     ringClass: "ring-[color:var(--loud-blue-bright)]/40",
     gradientClass: "from-[color:var(--loud-blue-bright)]/25 via-[color:var(--loud-blue-bright)]/5 to-transparent",
   },
@@ -77,7 +77,7 @@ export const PROFILES: Record<string, ProfileMeta> = {
     ],
     effects: ["Balanced euphoria", "Social spark", "Playful mood", "Anytime ease"],
     composition: ["Premium true-grade terpenes", "Smoke-free pouch", "Tobacco-free", "Discreet & odourless"],
-    accentClass: "text-loud-pink",
+    composition: ["THC-infused from delegated cultivation share", "Smoke-free pouch", "Tobacco-free", "Discreet & odourless"],
     ringClass: "ring-loud-pink/40",
     gradientClass: "from-loud-pink/25 via-loud-pink/5 to-transparent",
   },
@@ -165,7 +165,7 @@ export function ProductModal({
               </p>
               <DialogTitle className="display mt-1 text-4xl text-white">{cleanTitle}</DialogTitle>
               <DialogDescription className="mt-2 text-sm text-white/60">
-                {profile.flavor}
+                THC-infused pouches prepared from your delegated cultivation share. {profile.flavor}
               </DialogDescription>
             </div>
 
@@ -209,7 +209,7 @@ export function ProductModal({
             <div className="grid grid-cols-2 gap-4">
               <div>
                 <p className="text-[11px] uppercase tracking-widest text-white/60 mb-2">Effects</p>
-                <ul className="space-y-1 text-xs text-white/70">
+                <p className="text-[11px] uppercase tracking-widest text-white/60 mb-2">Member Experience</p>
                   {profile.effects.map((e) => (
                     <li key={e} className="flex items-center gap-1.5"><Leaf className="h-3 w-3 text-loud-yellow" />{e}</li>
                   ))}
@@ -218,7 +218,7 @@ export function ProductModal({
               <div>
                 <p className="text-[11px] uppercase tracking-widest text-white/60 mb-2">Composition</p>
                 <ul className="space-y-1 text-xs text-white/70">
-                  {profile.composition.map((e) => (
+                <p className="text-[11px] uppercase tracking-widest text-white/60 mb-2">Preparation Details</p>
                     <li key={e} className="flex items-center gap-1.5"><ShieldCheck className="h-3 w-3 text-loud-yellow" />{e}</li>
                   ))}
                 </ul>
@@ -229,19 +229,19 @@ export function ProductModal({
               <div>
                 <p className="text-[10px] uppercase tracking-widest text-white/40">Member contribution</p>
                 <p className="font-display text-3xl text-white leading-none mt-1">
-                  R{parseFloat(price.amount).toFixed(0)}
+                <p className="text-[10px] uppercase tracking-widest text-white/40">Monthly Cultivation Management Fee</p>
                   <span className="ml-2 text-xs align-middle text-white/40 line-through">R{(parseFloat(price.amount) / 0.75).toFixed(0)}</span>
                 </p>
                 <p className={cn("mt-1 text-[10px] uppercase tracking-widest", profile.accentClass)}>Early access · 25% off</p>
               </div>
-              <Button
+                <p className={cn("mt-1 text-[10px] uppercase tracking-widest", profile.accentClass)}>Founding member rate · 25% off</p>
                 onClick={handleAdd}
                 disabled={isLoading || !variant}
                 className="cta-gradient text-black hover:opacity-90 uppercase tracking-widest text-xs font-semibold px-6"
               >
                 {isLoading ? <Loader2 className="h-4 w-4 animate-spin" /> : (
                   <><Plus className="h-4 w-4 mr-1" /> Secure This Yield Share</>
-                )}
+                  <><Plus className="h-4 w-4 mr-1" /> Request This Allocation</>
               </Button>
             </div>
           </div>

@@ -59,7 +59,7 @@ export function ProductCard({ product, index }: { product: ShopifyProduct; index
             <p className="font-display text-3xl text-white leading-none">
               R{parseFloat(price.amount).toFixed(0)}
             </p>
-            <p className="mt-1 text-[10px] uppercase tracking-widest text-white/40">per tin</p>
+            <p className="mt-1 text-[10px] uppercase tracking-widest text-white/40">monthly contribution</p>
           </div>
         </div>
 
@@ -69,7 +69,7 @@ export function ProductCard({ product, index }: { product: ShopifyProduct; index
           className="mt-5 w-full uppercase tracking-widest text-xs font-semibold"
           variant="default"   // or "outline" / "secondary" depending on desired style
         >
-          <Sparkles className="h-4 w-4 mr-1.5" /> Reserve My Share
+          <Sparkles className="h-4 w-4 mr-1.5" /> Request Allocation
         </Button>
       </div>
     </motion.div>
