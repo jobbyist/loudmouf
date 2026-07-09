@@ -33,8 +33,11 @@ jobs:
       - name: Copy CNAME for custom domain
         run: |
           mkdir -p .output/public
-          cp CNAME .output/public/CNAME || echo "CNAME file not found"
-          echo "CNAME copied successfully"
+          if cp CNAME .output/public/CNAME; then
+            echo "CNAME copied successfully"
+          else
+            echo "CNAME file not found"
+          fi
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
