@@ -124,7 +124,7 @@ export function ProductModal({
                   className="h-full w-full object-cover"
                 />
               )}
-              <img
+                src="/true-grade.webp"
                 src={trueGrade.url}
                 alt="True Grade Quality"
                 className="absolute bottom-3 right-3 h-16 w-16 opacity-90"

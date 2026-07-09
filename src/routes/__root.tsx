@@ -105,6 +105,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     links: [
       { rel: "stylesheet", href: appCss },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "preload", href: "/loudmouf-logo.png", as: "image", type: "image/png" },
+      { rel: "preload", href: "/hero-poster.png", as: "image", type: "image/png" },
+      { rel: "preload", href: "/hero.mp4", as: "video", type: "video/mp4" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
