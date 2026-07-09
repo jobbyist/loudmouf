@@ -22,6 +22,7 @@ export default defineConfig({
 
   publicDir: "public",
 
+  assetsInclude: ['**/*.png', '**/*.jpg', '**/*.jpeg', '**/*.gif', '**/*.svg', '**/*.webp', '**/*.mp4', '**/*.webm'],
   build: {
     outDir: ".output/public",
     sourcemap: true,
@@ -30,7 +31,8 @@ export default defineConfig({
     chunkSizeWarningLimit: 1000,
     emptyOutDir: true,
     assetsDir: "assets",
-
+    assetsDir: "_assets",
+    copyPublicDir: true,
     rollupOptions: {
       output: {
         manualChunks: {
@@ -38,15 +40,15 @@ export default defineConfig({
           router: ["@tanstack/react-router", "@tanstack/react-start"],
         },
         assetFileNames: (assetInfo) => {
-          if (assetInfo.name?.endsWith(".css")) {
+            return "_assets/css/[name]-[hash][extname]";
             return "assets/css/[name]-[hash][extname]";
           }
-          if (/\.(png|jpe?g|gif|svg|webp|ico)$/.test(assetInfo.name || "")) {
+            return "_assets/images/[name]-[hash][extname]";
             return "assets/images/[name]-[hash][extname]";
           }
-          if (/\.(mp4|webm|ogv)$/.test(assetInfo.name || "")) {
+            return "_assets/videos/[name]-[hash][extname]";
             return "assets/videos/[name]-[hash][extname]";
-          }
+          return "_assets/[name]-[hash][extname]";
           return "assets/[name]-[hash][extname]";
         },
       },
