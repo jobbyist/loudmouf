@@ -6,7 +6,7 @@ import { Menu, X } from "lucide-react";
 
 const links = [
   { label: "Home", href: "/#home", type: "hash" as const },
-  { label: "Allocations", href: "/#product", type: "hash" as const },
+  { label: "Yield Share Dashboard", href: "/#product", type: "hash" as const },
   { label: "The Collective", href: "/#why", type: "hash" as const },
   { label: "Launch Event", href: "/launch", type: "route" as const },
   { label: "FAQs", href: "/#faq", type: "hash" as const },

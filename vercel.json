@@ -6,15 +6,16 @@
   "installCommand": "npm ci",
   "env": {
     "NODE_ENV": "production",
-"SHOPIFY_STOREFRONT_TOKEN": "@shopify-storefront-token",
-"SHOPIFY_STORE_DOMAIN": "@shopify-store-domain"
+    "SHOPIFY_STOREFRONT_TOKEN": "@shopify-storefront-token",
+    "SHOPIFY_STORE_DOMAIN": "@shopify-store-domain"
   },
   "headers": [
     {
       "source": "/(.*)",
       "headers": [
         { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "X-Frame-Options", "value": "DENY" }
+        { "key": "X-Frame-Options", "value": "DENY" },
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
       ]
     }
   ]

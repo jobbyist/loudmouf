@@ -43,14 +43,14 @@ const [isAmbassadorModalOpen, setIsAmbassadorModalOpen] = useState(false);
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "LOUDMOUF™ — Big Taste. Zero Smoke. Pre-Order Now." },
+      { title: "LOUDMOUF™ — Private Members-Only Lifestyle Club" },
       {
         name: "description",
         content:
-          "Premium South African cannabis pouches. Discreet. Potent. Unapologetic. Reserve the first production run of LOUDMOUF™ — Cheesecake, Blueberry and Bubblegum. Free delivery over R800.",
+          "Private members-only lifestyle club. Delegate your personal cultivation rights to our horticulturists. THC-infused pouches prepared from your delegated cultivation share. 18+ only.",
       },
-      { property: "og:title", content: "LOUDMOUF™ — Big Taste. Zero Smoke." },
-      { property: "og:description", content: "Reserve the first production run of LOUDMOUF™ premium cannabis pouches. 18+ only." },
+      { property: "og:title", content: "LOUDMOUF™ — Private Members-Only Lifestyle Club" },
+      { property: "og:description", content: "Delegate your personal cultivation rights to our horticulturists. Private members-only lifestyle club. 18+ only." },
       { property: "og:type", content: "website" },
       { property: "og:image", content: getAssetUrl(adCreative) },
       { name: "twitter:card", content: "summary_large_image" },
@@ -110,7 +110,7 @@ function LandingPage() {
               transition={{ duration: 0.8, delay: 0.3 }}
               className="mt-6 max-w-lg text-base sm:text-lg text-white/70"
             >
-              South Africa's first cannabis pouches infused with premium true-grade terpenes. Exercise your constitutional right to personal cultivation within a supportive, members-only collective.
+              Private Members-Only Lifestyle Club. Delegate your personal cultivation rights to our horticulturists. THC-infused pouches prepared from your delegated cultivation share.
             </motion.p>
 
             <motion.div
@@ -202,18 +202,17 @@ function LandingPage() {
         <div className="flex flex-wrap items-end justify-between gap-6 mb-14">
           <div>
             <p className="text-xs uppercase tracking-[0.3em] text-loud-yellow">The Flavours</p>
-            <h2 className="display mt-3 text-5xl sm:text-6xl text-white">Bold Flavours.<br />Zero Smoke.</h2>
+            <h2 className="display mt-3 text-5xl sm:text-6xl text-white">Personalized Micro-Allotment Options</h2>
           </div>
           <p className="max-w-md text-sm text-white/60">
-            Three signature strains crafted for every mood. Reserve your tin from the first production run — each shipment
-            is capped.
+            Three signature cultivation shares prepared for every mood. Each monthly allotment is made to order from your delegated cultivation share.
           </p>
         </div>
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {products.length === 0 ? (
             <div className="col-span-full glass rounded-3xl p-12 text-center text-white/60">
-              No products found. Loading the drop…
+              No allocation options found. Loading member portal…
             </div>
           ) : (
             products.map((p, i) => <ProductCard key={p.node.id} product={p} index={i} />)
@@ -264,8 +263,8 @@ function LandingPage() {
 
         <div className="mt-14 grid gap-6 md:grid-cols-3">
           {[
-            { n: "01", icon: Package, t: "Pre-Order", c: "Secure your yield from Drop 001 with secure checkout via Shopify." },
-            { n: "02", icon: Sparkles, t: "Production", c: "Your tin is lab-tested, packed and readied at our Cape Town facility." },
+            { n: "01", icon: Package, t: "Request Allocation", c: "Confirm your monthly yield share contribution through our secure member portal." },
+            { n: "02", icon: Sparkles, t: "Cultivation", c: "Your share is lab-tested, prepared and readied by our dedicated horticulturists." },
             { n: "03", icon: Truck, t: "Delivery", c: "Our courier partner delivers your yield discreetly within 3–5 working days across South Africa." },
           ].map((s, i) => (
             <motion.div
@@ -308,11 +307,11 @@ function LandingPage() {
             </h2>
             <p className="mt-6 max-w-lg text-white/70 leading-relaxed">
               LOUDMOUF™ is for those who want the experience without the smoke. Born in South Africa, built for the
-              unapologetic — musicians, creatives, hustlers and the crew that moves loud without ever needing to raise
-              their voice.
+              unapologetic. A private members-only collective where you delegate your constitutional cultivation rights
+              to our expert horticulturists.
             </p>
             <p className="mt-4 max-w-lg text-white/70 leading-relaxed">
-              Big flavour. Zero smoke. Stay loud.
+              Delegate your cultivation. Receive your share. Stay loud.
             </p>
             <div className="mt-8">
               <Logo className="text-6xl md:text-7xl" tone="gradient" />
@@ -327,7 +326,7 @@ function LandingPage() {
     <p className="text-xs uppercase tracking-[0.3em] text-loud-yellow">The Community</p>
     <h2 className="display mt-3 text-5xl sm:text-6xl text-white">Word on the street.</h2>
     <p className="mt-4 text-white/60">
-      Real excitement building for Drop 001. Here’s what early community members are saying.
+      Real excitement building for Drop 001. Here's what founding members are saying.
     </p>
   </div>
 
@@ -499,7 +498,7 @@ function LandingPage() {
             And limited.
           </h2>
           <p className="mt-6 mx-auto max-w-xl text-white/70">
-            Only 2,000 tins from the first production run. Reserve yours before the campaign closes.
+            Only 2,000 monthly allocation slots available. Confirm your contribution before this cycle closes.
           </p>
 
           <div className="mt-10 mx-auto max-w-md">
@@ -531,7 +530,7 @@ function LandingPage() {
 
           <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-[11px] uppercase tracking-widest text-white/50">
             <div className="flex items-center gap-2"><ShieldCheck className="h-4 w-4 text-loud-yellow" /> Secure Online Payments</div>
-            <div className="flex items-center gap-2"><Truck className="h-4 w-4 text-loud-yellow" /> Founding Member Portal</div>
+            <div className="flex items-center gap-2"><Truck className="h-4 w-4 text-loud-yellow" /> Member Portal Access</div>
             <div className="flex items-center gap-2"><Clock className="h-4 w-4 text-loud-yellow" /> Launch Summit Access Pass</div>
           </div>
 

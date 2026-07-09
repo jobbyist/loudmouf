@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ShoppingCart, Minus, Plus, Trash2, ExternalLink, Loader2 } from "lucide-react";
+import { Package, Minus, Plus, Trash2, ExternalLink, Loader2 } from "lucide-react";
 import { useCartStore } from "@/stores/cartStore";
 import { incrementEarlyAccessClaimed } from "./EarlyAccessBar";
 
@@ -31,9 +31,9 @@ export function CartDrawer() {
       <SheetTrigger asChild>
         <button
           className="relative inline-flex h-10 w-10 items-center justify-center rounded-full glass hover:glow-purple transition"
-          aria-label="Open cart"
+          aria-label="Open allocation tracker"
         >
-          <ShoppingCart className="h-4 w-4" />
+          <Package className="h-4 w-4" />
           {totalItems > 0 && (
             <Badge className="absolute -top-1 -right-1 h-5 w-5 rounded-full p-0 flex items-center justify-center text-[10px] bg-loud-yellow text-black">
               {totalItems}
@@ -43,17 +43,17 @@ export function CartDrawer() {
       </SheetTrigger>
       <SheetContent className="w-full sm:max-w-lg flex flex-col h-full bg-loud-ink border-l border-white/10">
         <SheetHeader>
-          <SheetTitle className="font-display text-2xl uppercase">Your Cart</SheetTitle>
+          <SheetTitle className="font-display text-2xl uppercase">Personal Allocation Tracker</SheetTitle>
           <SheetDescription>
-            {totalItems === 0 ? "Nothing here yet." : `${totalItems} item${totalItems !== 1 ? "s" : ""} — ready when you are.`}
+            {totalItems === 0 ? "No allocations requested yet." : `${totalItems} allocation${totalItems !== 1 ? "s" : ""} — ready when you are.`}
           </SheetDescription>
         </SheetHeader>
         <div className="flex flex-col flex-1 pt-4 min-h-0">
           {items.length === 0 ? (
             <div className="flex-1 grid place-items-center text-center">
               <div>
-                <ShoppingCart className="mx-auto h-10 w-10 text-white/30" />
-                <p className="mt-3 text-sm text-white/50">Your cart is empty.</p>
+                <Package className="mx-auto h-10 w-10 text-white/30" />
+                <p className="mt-3 text-sm text-white/50">No allocations requested yet.</p>
               </div>
             </div>
           ) : (
@@ -100,11 +100,11 @@ export function CartDrawer() {
               <div className="mt-4 space-y-4 border-t border-white/10 pt-4">
                 <div className="flex items-center justify-between text-sm text-white/60">
                   <span>Delivery</span>
-                  <span>R150 · 3–5 days · Courier Guy</span>
+                  <span>Allocation Delivery</span>
                 </div>
                 <div className="flex items-center justify-between">
                   <span className="text-sm uppercase tracking-widest text-white/60">Subtotal</span>
-                  <span className="font-display text-2xl">
+                  <span className="text-sm uppercase tracking-widest text-white/60">Cultivation Management Fees</span>
                     {currency === "ZAR" ? "R" : currency + " "}
                     {totalPrice.toFixed(2)}
                   </span>
@@ -119,12 +119,12 @@ export function CartDrawer() {
                     <Loader2 className="h-4 w-4 animate-spin" />
                   ) : (
                     <>
-                      <ExternalLink className="h-4 w-4 mr-2" /> Secure Checkout
+                      <ExternalLink className="h-4 w-4 mr-2" /> Confirm Contribution for This Cycle
                     </>
                   )}
                 </Button>
                 <p className="text-[10px] text-center uppercase tracking-widest text-white/40">
-                  Powered by Shopify · Visa · Mastercard · Apple Pay
+                  Secure Member Payments · Visa · Mastercard · Apple Pay
                 </p>
               </div>
             </>
