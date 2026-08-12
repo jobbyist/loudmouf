@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import logoAsset from "/loudmouf-logo.png";
+import logoAsset from "@/assets/loudmouf-logo.png.asset.json";
 
 /**
  * LOUDMOUF™ wordmark — official brand lockup.
